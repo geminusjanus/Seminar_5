@@ -26,32 +26,6 @@ void PrintArray (double[] array)
 }
 double[] arr = CreateArrayRndDouble(5);
 PrintArray(arr);
-
-double Max ();
-{
-    double max = default;
-    for (int i = 0; i < array.length; i++)
-    {
-        if (array[i] > max) max = array[i];
-    }
-    return max;
-}
-double max1 = Max ();
-
-double Min ();
-{
-    double min = default;
-    for (int i = 0; i < array.length; i++)
-    {
-        if (array[i] < min) min = array[i];
-    }
-    return min;
-}
-double min1 = Min ();
-
-double getSubstraction = default;
-getSubstraction = max1 - min1;
-Console.WriteLine($"{getSubstraction}");
 // Random rnd = new Random();
 // int[] d = new int[30];
 // int max = 0, min = 100;
