@@ -6,12 +6,10 @@ double[] CreateArrayRndDouble (int size)
 {
     double[] array = new double[size];
     var rnd = new Random ();
-
     for (int i = 0; i < size; i++)
     {
         double rndNum = rnd.NextDouble() * 100;
         array[i] = Math.Round(rndNum, 1);
-
     }
     return array;
 }
@@ -26,34 +24,34 @@ void PrintArray (double[] array)
     }
     Console.WriteLine("]");
 }
-
-double min = default;
-double max = default;
-double getSubstraction = default;
-if (array[i] > max) max = d[i];
-if (array[i] < min) min = d[i];
-getSubstraction = max - min;
-Console.WriteLine($"Разница между макс. и мин. элементами массива = {getSubstraction}");
-
-
 double[] arr = CreateArrayRndDouble(5);
 PrintArray(arr);
 
-// double[] GetSubtractionMaxMin (double[] array)
-// {
-//     double getSubstraction = default;
-//     double max = default;
-//     double min = default;
-//     for (int i = 0; i < array.Length; i++)
-//     {
-//         if (array[i] > max) max = array[i];
-//         if (array[i] < min) min = array[i];
-//     }
-//     getSubstraction = max - min;
-//     return getSubstraction;
-// }
-// Console.WriteLine($"Разница максимального и минимального: {getSubstraction}");
+double Max ();
+{
+    double max = default;
+    for (int i = 0; i < array.length; i++)
+    {
+        if (array[i] > max) max = array[i];
+    }
+    return max;
+}
+double max1 = Max ();
 
+double Min ();
+{
+    double min = default;
+    for (int i = 0; i < array.length; i++)
+    {
+        if (array[i] < min) min = array[i];
+    }
+    return min;
+}
+double min1 = Min ();
+
+double getSubstraction = default;
+getSubstraction = max1 - min1;
+Console.WriteLine($"{getSubstraction}");
 // Random rnd = new Random();
 // int[] d = new int[30];
 // int max = 0, min = 100;

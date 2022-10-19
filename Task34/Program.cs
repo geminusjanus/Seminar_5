@@ -31,4 +31,4 @@ int count = default;
 for (int i = 0; i < arr.Length; i++)
         if (arr[i] % 2 == 0)
             count++;
-Console.WriteLine($"Количество четных чисел в массиве равно  {count}");
+Console.WriteLine($"Количество четных чисел в массиве равно {count}");
